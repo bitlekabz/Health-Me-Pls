@@ -9,34 +9,118 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500;700&display=swap" rel="stylesheet">
-    
+
 </head>
 <body>
 
-<div class="hero">
+<header class="hero">
 
-    <div class="slider">
-
-        <img src="images/food.jpg" class="slide active" style="object-position: center;">
-        <img src="images/Health2.png" class="slide" style="object-position: center;">
-        <img src="images/Health_Running.jpg" class="slide" style="object-position: center;">
-        
-
+    <div class="hero__slider">
+        <img src="images/food.jpg" class="hero__slide is-active" alt="">
+        <img src="images/Health2.png" class="hero__slide" alt="">
+        <img src="images/Health_Running.jpg" class="hero__slide" alt="">
     </div>
 
-    <div class="overlay"></div>
+    <div class="hero__scrim"></div>
 
-    <div class="content">
-
-        <h1>Health Me Pls</h1>
-
-        <h2>สุขภาพดี เริ่มต้นที่ตัวคุณ</h2>
-
+    <div class="hero__content">
+        <h1 class="hero__title">Health Me Please</h1>
+        <p class="hero__subtitle">สุขภาพดี เริ่มต้นที่ตัวคุณ</p>
+        <a class="hero__cta" href="#lessons">เริ่มเรียนรู้</a>
     </div>
 
-</div>
+    <div class="hero__dots" role="tablist" aria-label="เลือกภาพพื้นหลัง">
+        <button class="hero__dot is-active" type="button" aria-label="ภาพที่ 1" data-index="0"></button>
+        <button class="hero__dot" type="button" aria-label="ภาพที่ 2" data-index="1"></button>
+        <button class="hero__dot" type="button" aria-label="ภาพที่ 3" data-index="2"></button>
+    </div>
+
+    <a class="hero__scroll-cue" href="#lessons">
+        <span class="hero__scroll-label">เลื่อนดูเนื้อหา</span>
+        <span class="hero__scroll-arrow"><i></i></span>
+    </a>
+
+</header>
+
+<nav class="site-nav">
+    <a class="site-nav__brand" href="index.html">Health Me Please</a>
+    <div class="site-nav__actions">
+        <a class="site-nav__link site-nav__link--login" href="login.html">เข้าสู่ระบบ</a>
+        <a class="site-nav__link site-nav__link--signup" href="signup.html">สมัคร</a>
+    </div>
+</nav>
+
+<main id="lessons">
+
+    <section class="about" aria-labelledby="about-heading">
+        <h2 id="about-heading" class="about__heading">Health Me Please คืออะไร</h2>
+        <p class="about__lead">เว็บไซต์รวบรวมความรู้สุขภาพพื้นฐาน 10 เรื่อง เขียนให้อ่านเข้าใจง่าย ไม่ต้องมีพื้นฐานทางการแพทย์มาก่อน เหมาะกับใครก็ตามที่อยากเริ่มดูแลสุขภาพตัวเองอย่างเป็นระบบ</p>
+
+        <div class="features">
+            <div class="feature-card feature-card--content">
+                <span class="feature-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5c2-1 5-1 7 0v14c-2-1-5-1-7 0V5Z"/><path d="M20 5c-2-1-5-1-7 0v14c2-1 5-1 7 0V5Z"/></svg>
+                </span>
+                <h3 class="feature-card__title">เนื้อหาบทเรียน</h3>
+                <p class="feature-card__text">10 บท ครอบคลุมเรื่องอาหาร การออกกำลังกาย การนอน และสุขภาพใจ อ่านทีละบท ใช้เวลาไม่นาน</p>
+            </div>
+
+            <a class="feature-card feature-card--pretest feature-card--link" href="pretest.html">
+                <span class="feature-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="12" height="16" rx="2"/><path d="M9 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1"/><path d="M9 12l2 2 4-4"/></svg>
+                </span>
+                <h3 class="feature-card__title">แบบทดสอบก่อนเรียน</h3>
+                <p class="feature-card__text">เช็กความรู้พื้นฐานที่มีอยู่ก่อนเริ่มอ่าน เพื่อดูว่าควรเน้นบทไหนเป็นพิเศษ</p>
+                <span class="feature-card__cta">ไปที่แบบทดสอบ &rarr;</span>
+            </a>
+
+            <a class="feature-card feature-card--posttest feature-card--link" href="posttest.html">
+                <span class="feature-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="12" height="16" rx="2"/><path d="M9 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1"/><line x1="9" y1="11" x2="15" y2="11"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+                </span>
+                <h3 class="feature-card__title">แบบทดสอบหลังเรียน</h3>
+                <p class="feature-card__text">ทบทวนความเข้าใจหลังอ่านจบแต่ละบท เพื่อดูว่าจับใจความสำคัญได้ครบไหม</p>
+                <span class="feature-card__cta">ไปที่แบบทดสอบ &rarr;</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="lessons" aria-labelledby="lessons-heading">
+        <div class="lessons__intro">
+            <h2 id="lessons-heading" class="lessons__heading">10 บทเรียนสู่สุขภาพที่ดีขึ้น</h2>
+            <p class="lessons__lead">กดเมนูด้านล่างแล้วเลือกบทที่สนใจ แต่ละบทจะเปิดเป็นหน้าเนื้อหาเต็ม</p>
+        </div>
+
+        <div class="lessons__layout">
+            <nav class="lesson-nav lesson-nav--standalone" aria-label="รายการบทเรียน">
+                <button class="lesson-nav__toggle" type="button" aria-expanded="false" aria-controls="lesson-nav-panel">
+                    <span>10 บทเรียนสู่สุขภาพที่ดีขึ้น</span>
+                    <span class="lesson-nav__chevron" aria-hidden="true"></span>
+                </button>
+                <div class="lesson-nav__panel" id="lesson-nav-panel">
+                    <div class="lesson-nav__inner">
+                        <ul class="lesson-nav__list">
+                        <li><a class="lesson-nav__link" href="lessons/lesson-01.html"><span class="lesson-nav__num">01</span><span>โภชนาการพื้นฐาน: กินอย่างไรให้สมดุล</span></a></li>
+                        <li><a class="lesson-nav__link" href="lessons/lesson-02.html"><span class="lesson-nav__num">02</span><span>เริ่มออกกำลังกายแบบไม่ฝืนตัวเอง</span></a></li>
+                        <li><a class="lesson-nav__link" href="lessons/lesson-03.html"><span class="lesson-nav__num">03</span><span>นอนหลับให้มีคุณภาพ ไม่ใช่แค่ให้ครบชั่วโมง</span></a></li>
+                        <li><a class="lesson-nav__link" href="lessons/lesson-04.html"><span class="lesson-nav__num">04</span><span>จัดการความเครียดในชีวิตประจำวัน</span></a></li>
+                        <li><a class="lesson-nav__link" href="lessons/lesson-05.html"><span class="lesson-nav__num">05</span><span>ดื่มน้ำให้เพียงพอในแต่ละวัน</span></a></li>
+                        <li><a class="lesson-nav__link" href="lessons/lesson-06.html"><span class="lesson-nav__num">06</span><span>สร้างกล้ามเนื้อและความแข็งแรง</span></a></li>
+                        <li><a class="lesson-nav__link" href="lessons/lesson-07.html"><span class="lesson-nav__num">07</span><span>ดูแลสุขภาพหัวใจและหลอดเลือด</span></a></li>
+                        <li><a class="lesson-nav__link" href="lessons/lesson-08.html"><span class="lesson-nav__num">08</span><span>ควบคุมน้ำหนักอย่างยั่งยืน</span></a></li>
+                        <li><a class="lesson-nav__link" href="lessons/lesson-09.html"><span class="lesson-nav__num">09</span><span>สุขภาพจิตและความสุขในชีวิต</span></a></li>
+                        <li><a class="lesson-nav__link" href="lessons/lesson-10.html"><span class="lesson-nav__num">10</span><span>ตรวจสุขภาพประจำปีอย่างเข้าใจ</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+</main>
 
 <script src="script.js"></script>
+<script src="auth.js"></script>
 
 </body>
 </html>
