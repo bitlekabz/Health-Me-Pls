@@ -28,62 +28,161 @@
 
     <p class="test-page__eyebrow">หลังเรียนจบ</p>
     <h1 class="test-page__title">แบบทดสอบหลังเรียน</h1>
-    <p class="test-page__lead">ทำแบบทดสอบสั้นๆ นี้หลังอ่านจบทั้ง 10 บท เพื่อทบทวนว่าจับใจความสำคัญของแต่ละบทได้ครบไหม</p>
+    <p class="test-page__lead">ทำแบบทดสอบสั้นๆ นี้หลังอ่านจบแต่ละบท เพื่อทบทวนว่าจับใจความสำคัญของบทเรียนได้ครบไหม</p>
 
-    <!--
-      TODO: ใส่คำถามจริงแทนตัวอย่างด้านล่าง
-      โครงสร้างคำถาม 1 ข้อ:
-      <div class="quiz-question">
-        <p class="quiz-question__prompt">1. ข้อความคำถาม</p>
-        <div class="quiz-options">
-          <label class="quiz-option"><input type="radio" name="q1"> ตัวเลือก</label>
-          ...
-        </div>
-      </div>
-    -->
-    <form class="quiz">
+    <form class="quiz" id="quizForm">
 
-        <div class="quiz-question">
-            <p class="quiz-question__prompt">1. (ตัวอย่างคำถาม) ข้อความคำถามจะใส่ตรงนี้</p>
+        <div class="quiz-question" data-correct="c">
+            <p class="quiz-question__prompt">1. (บทที่ 01) &ldquo;ธงโภชนาการ&rdquo; แนะนำให้กินอาหารหมวดใดมากที่สุดเป็นฐานล่างสุด?</p>
             <div class="quiz-options">
-                <label class="quiz-option"><input type="radio" name="q1"> ตัวเลือก ก</label>
-                <label class="quiz-option"><input type="radio" name="q1"> ตัวเลือก ข</label>
-                <label class="quiz-option"><input type="radio" name="q1"> ตัวเลือก ค</label>
-                <label class="quiz-option"><input type="radio" name="q1"> ตัวเลือก ง</label>
+                <label class="quiz-option"><input type="radio" name="q1" value="a"> เนื้อสัตว์และนม</label>
+                <label class="quiz-option"><input type="radio" name="q1" value="b"> ผักและผลไม้</label>
+                <label class="quiz-option"><input type="radio" name="q1" value="c"> ข้าวและแป้ง</label>
+                <label class="quiz-option"><input type="radio" name="q1" value="d"> น้ำตาลและไขมัน</label>
             </div>
         </div>
 
-        <div class="quiz-question">
-            <p class="quiz-question__prompt">2. (ตัวอย่างคำถาม) ข้อความคำถามจะใส่ตรงนี้</p>
+        <div class="quiz-question" data-correct="b">
+            <p class="quiz-question__prompt">2. (บทที่ 01) วิธีแบ่งจานอาหารที่แนะนำในบทเรียนคือข้อใด?</p>
             <div class="quiz-options">
-                <label class="quiz-option"><input type="radio" name="q2"> ตัวเลือก ก</label>
-                <label class="quiz-option"><input type="radio" name="q2"> ตัวเลือก ข</label>
-                <label class="quiz-option"><input type="radio" name="q2"> ตัวเลือก ค</label>
-                <label class="quiz-option"><input type="radio" name="q2"> ตัวเลือก ง</label>
+                <label class="quiz-option"><input type="radio" name="q2" value="a"> ข้าวครึ่งจาน ผักหนึ่งในสี่ โปรตีนหนึ่งในสี่</label>
+                <label class="quiz-option"><input type="radio" name="q2" value="b"> ผักครึ่งจาน ข้าว/แป้งหนึ่งในสี่ โปรตีนหนึ่งในสี่</label>
+                <label class="quiz-option"><input type="radio" name="q2" value="c"> โปรตีนครึ่งจาน ผักหนึ่งในสี่ ข้าวหนึ่งในสี่</label>
+                <label class="quiz-option"><input type="radio" name="q2" value="d"> แบ่งเท่าๆ กันทั้งสามหมวดอย่างละหนึ่งในสาม</label>
             </div>
         </div>
 
-        <div class="quiz-question">
-            <p class="quiz-question__prompt">3. (ตัวอย่างคำถาม) ข้อความคำถามจะใส่ตรงนี้</p>
+        <div class="quiz-question" data-correct="c">
+            <p class="quiz-question__prompt">3. (บทที่ 02) หลักการที่เหมาะสมสำหรับผู้เริ่มต้นออกกำลังกายคือข้อใด?</p>
             <div class="quiz-options">
-                <label class="quiz-option"><input type="radio" name="q3"> ตัวเลือก ก</label>
-                <label class="quiz-option"><input type="radio" name="q3"> ตัวเลือก ข</label>
-                <label class="quiz-option"><input type="radio" name="q3"> ตัวเลือก ค</label>
-                <label class="quiz-option"><input type="radio" name="q3"> ตัวเลือก ง</label>
+                <label class="quiz-option"><input type="radio" name="q3" value="a"> ออกให้หนักที่สุดตั้งแต่วันแรกเพื่อเห็นผลเร็ว</label>
+                <label class="quiz-option"><input type="radio" name="q3" value="b"> ออกกำลังกายเฉพาะวันหยุดเท่านั้น</label>
+                <label class="quiz-option"><input type="radio" name="q3" value="c"> เริ่มจากความหนักที่เหมาะสมแล้วค่อยๆ เพิ่มทีละน้อย</label>
+                <label class="quiz-option"><input type="radio" name="q3" value="d"> เลือกออกกำลังกายแบบเดียวไปตลอดโดยไม่ปรับเปลี่ยน</label>
             </div>
         </div>
 
-        <button class="quiz-submit" type="button">ส่งคำตอบ</button>
+        <div class="quiz-question" data-correct="a">
+            <p class="quiz-question__prompt">4. (บทที่ 02) &ldquo;กิจกรรมทางกาย&rdquo; ต่างจาก &ldquo;การออกกำลังกาย&rdquo; อย่างไร?</p>
+            <div class="quiz-options">
+                <label class="quiz-option"><input type="radio" name="q4" value="a"> กิจกรรมทางกายคือการเคลื่อนไหวทั่วไปที่ใช้พลังงาน ไม่จำเป็นต้องมีแบบแผน</label>
+                <label class="quiz-option"><input type="radio" name="q4" value="b"> กิจกรรมทางกายต้องทำในฟิตเนสเท่านั้น</label>
+                <label class="quiz-option"><input type="radio" name="q4" value="c"> ทั้งสองคำมีความหมายเหมือนกันทุกประการ</label>
+                <label class="quiz-option"><input type="radio" name="q4" value="d"> การออกกำลังกายไม่นับเป็นกิจกรรมทางกาย</label>
+            </div>
+        </div>
+
+        <div class="quiz-question" data-correct="d">
+            <p class="quiz-question__prompt">5. (บทที่ 03) การนอนหลับที่มีคุณภาพควรพิจารณาจากอะไร นอกเหนือจากจำนวนชั่วโมง?</p>
+            <div class="quiz-options">
+                <label class="quiz-option"><input type="radio" name="q5" value="a"> เวลาที่ใช้เล่นโทรศัพท์ก่อนนอน</label>
+                <label class="quiz-option"><input type="radio" name="q5" value="b"> ขนาดของหมอนที่ใช้</label>
+                <label class="quiz-option"><input type="radio" name="q5" value="c"> อุณหภูมิห้องนอนเพียงอย่างเดียว</label>
+                <label class="quiz-option"><input type="radio" name="q5" value="d"> การหลับได้ต่อเนื่องและตื่นกลางดึกบ่อยหรือไม่</label>
+            </div>
+        </div>
+
+        <div class="quiz-question" data-correct="b">
+            <p class="quiz-question__prompt">6. (บทที่ 03) การนอนหลับไม่เพียงพอส่งผลต่อสิ่งใดบ้าง?</p>
+            <div class="quiz-options">
+                <label class="quiz-option"><input type="radio" name="q6" value="a"> ไม่มีผลใดๆ ต่อร่างกายหากนอนชดเชยวันหลัง</label>
+                <label class="quiz-option"><input type="radio" name="q6" value="b"> สมาธิ อารมณ์ และความสามารถในการเรียนรู้</label>
+                <label class="quiz-option"><input type="radio" name="q6" value="c"> ส่งผลเฉพาะรูปร่างภายนอกเท่านั้น</label>
+                <label class="quiz-option"><input type="radio" name="q6" value="d"> ทำให้ความจำดีขึ้นในระยะสั้น</label>
+            </div>
+        </div>
+
+        <div class="quiz-question" data-correct="c">
+            <p class="quiz-question__prompt">7. (บทที่ 04) ความเครียดแบบเฉียบพลันมีลักษณะอย่างไร?</p>
+            <div class="quiz-options">
+                <label class="quiz-option"><input type="radio" name="q7" value="a"> เกิดขึ้นตลอดเวลาโดยไม่มีสาเหตุ</label>
+                <label class="quiz-option"><input type="radio" name="q7" value="b"> สะสมจากหลายเรื่องต่อเนื่องกันเป็นเวลานาน</label>
+                <label class="quiz-option"><input type="radio" name="q7" value="c"> เกิดจากเหตุการณ์ใดเหตุการณ์หนึ่งและมักลดลงเมื่อสถานการณ์ผ่านไป</label>
+                <label class="quiz-option"><input type="radio" name="q7" value="d"> เป็นอาการที่พบเฉพาะในผู้ใหญ่เท่านั้น</label>
+            </div>
+        </div>
+
+        <div class="quiz-question" data-correct="a">
+            <p class="quiz-question__prompt">8. (บทที่ 04) ข้อใดเป็นวิธีรับมือความเครียดที่บทเรียนแนะนำ?</p>
+            <div class="quiz-options">
+                <label class="quiz-option"><input type="radio" name="q8" value="a"> หายใจช้าๆ ออกกำลังกาย และพูดคุยกับคนที่ไว้ใจ</label>
+                <label class="quiz-option"><input type="radio" name="q8" value="b"> ดื่มแอลกอฮอล์เพื่อให้รู้สึกดีขึ้นชั่วคราว</label>
+                <label class="quiz-option"><input type="radio" name="q8" value="c"> เก็บความรู้สึกไว้คนเดียวโดยไม่บอกใคร</label>
+                <label class="quiz-option"><input type="radio" name="q8" value="d"> พยายามคิดแก้ทุกปัญหาพร้อมกันในคราวเดียว</label>
+            </div>
+        </div>
+
+        <div class="quiz-question" data-correct="b">
+            <p class="quiz-question__prompt">9. (บทที่ 05) &ldquo;สุขภาพจิตที่ดี&rdquo; ตามบทเรียนหมายถึงอะไร?</p>
+            <div class="quiz-options">
+                <label class="quiz-option"><input type="radio" name="q9" value="a"> การไม่รู้สึกเศร้าหรือเครียดเลย</label>
+                <label class="quiz-option"><input type="radio" name="q9" value="b"> ความสามารถในการรับรู้และจัดการกับอารมณ์ของตัวเองได้อย่างเหมาะสม</label>
+                <label class="quiz-option"><input type="radio" name="q9" value="c"> การมีความสุขตลอดเวลาโดยไม่มีข้อยกเว้น</label>
+                <label class="quiz-option"><input type="radio" name="q9" value="d"> การไม่แสดงอารมณ์ใดๆ ออกมาให้คนอื่นเห็น</label>
+            </div>
+        </div>
+
+        <div class="quiz-question" data-correct="d">
+            <p class="quiz-question__prompt">10. (บทที่ 05) ข้อใดถูกต้องเกี่ยวกับความเศร้ากับภาวะซึมเศร้า?</p>
+            <div class="quiz-options">
+                <label class="quiz-option"><input type="radio" name="q10" value="a"> เป็นสิ่งเดียวกันทุกประการ ใช้แทนกันได้เสมอ</label>
+                <label class="quiz-option"><input type="radio" name="q10" value="b"> ภาวะซึมเศร้าเป็นแค่ความเศร้าที่รุนแรงขึ้นเล็กน้อยเท่านั้น</label>
+                <label class="quiz-option"><input type="radio" name="q10" value="c"> ความเศร้าต้องได้รับการวินิจฉัยจากแพทย์เสมอ</label>
+                <label class="quiz-option"><input type="radio" name="q10" value="d"> ภาวะซึมเศร้าเป็นปัญหาสุขภาพจิตที่ต้องได้รับการประเมิน ไม่ควรสรุปจากอาการเศร้าเพียงอย่างเดียว</label>
+            </div>
+        </div>
+
+        <button class="quiz-submit" type="button" id="quizSubmitBtn">ส่งคำตอบ</button>
     </form>
 
     <div class="quiz-result">
-        <p class="quiz-result__label">ผลคะแนนจะแสดงที่นี่</p>
+        <p class="quiz-result__label" id="quizResultLabel">ผลคะแนนจะแสดงที่นี่</p>
     </div>
 
 </main>
 
 <script src="script.js"></script>
 <script src="auth.js"></script>
+<script>
+    (function () {
+        const form = document.getElementById("quizForm");
+        const btn = document.getElementById("quizSubmitBtn");
+        const resultLabel = document.getElementById("quizResultLabel");
+
+        if (!form || !btn) return;
+
+        btn.addEventListener("click", () => {
+            const questions = form.querySelectorAll(".quiz-question");
+            let answered = 0;
+            let correct = 0;
+
+            questions.forEach((q) => {
+                const name = q.querySelector("input[type=radio]").name;
+                const selected = form.querySelector(`input[name="${name}"]:checked`);
+                const correctValue = q.dataset.correct;
+
+                q.classList.remove("is-correct", "is-incorrect");
+
+                if (selected) {
+                    answered++;
+                    if (selected.value === correctValue) {
+                        correct++;
+                        q.classList.add("is-correct");
+                    } else {
+                        q.classList.add("is-incorrect");
+                    }
+                }
+            });
+
+            if (answered < questions.length) {
+                resultLabel.textContent = `กรุณาตอบให้ครบทุกข้อ (ตอบแล้ว ${answered}/${questions.length} ข้อ)`;
+                return;
+            }
+
+            resultLabel.textContent = `คุณได้คะแนน ${correct} จาก ${questions.length} ข้อ`;
+        });
+    })();
+</script>
 
 </body>
 </html>
